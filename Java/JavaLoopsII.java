@@ -9,19 +9,25 @@ class Solution{
             int a = in.nextInt();
             int b = in.nextInt();
             int n = in.nextInt();
-             
-            double hasil = 0;
-            for(int j =0; j < n ; j++){
-                pangkat = 
-                System.out.print(pangkat + " ");
-                hasil = pangkat * b;
-                a += hasil;
-                // System.out.print(a + " ");
-            }
-            // System.out.println();
+            
+            int eksponen = 1;
+            int hasil = 1;
+            
+            for(int j = 1; j <= n; j++){
+                if(j == 1){
+                    hasil = 1 * b;
+                    System.out.print(hasil + a + " ");
+                }else{
+                    eksponen *= 2;
+                    hasil += eksponen * b;
+                    System.out.print(hasil + a + " ");  
+                }
+            } 
+            
+            System.out.println();       
         }
+        
+    
         in.close();
     }
-    
-   
 }
